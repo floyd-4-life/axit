@@ -1,0 +1,686 @@
+@import reset
+@import fonts
+@import vars
+
+body.--lock
+  overflow: hidden
+
+body
+  font-family: $f-primary
+  font-size: 14px
+  line-height: 20px
+  font-weight: 400
+  color: $c-hotel
+
+.container
+  max-width: 1130px
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  padding: 0 15px
+
+.title
+  font-family: $f-secondary
+  font-size: 36px
+  line-height: 43px
+  text-transform: uppercase
+  text-align: center
+  position: relative
+  color: $c-juliet
+  &--white
+    color: $c-delta
+  &--underline-orange-left
+    padding: 0 0 27px 0
+    margin: 0 0 26px 0
+    &::after
+      content: ''
+      position: absolute
+      width: 64px
+      bottom: 0
+      left: 0
+      height: 2px
+      background-color: $c-alpha
+  &--underline-orange-center
+    padding: 0 0 23px 0
+    margin: 0 0 26px 0
+    &::after
+      content: ''
+      position: absolute
+      width: 64px
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      height: 2px
+      background-color: $c-alpha
+  &--underline-white-left
+    padding-bottom: 35px
+    margin: 0 0 34px 0
+    &::after
+      content: ''
+      position: absolute
+      width: 64px
+      bottom: 0
+      left: 5px
+      height: 2px
+      background-color: $c-delta
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+  &--underline-white-center
+    color: $c-delta
+    padding-bottom: 35px
+    margin: 0 0 36px 0
+    &::after
+      content: ''
+      position: absolute
+      width: 64px
+      bottom: 0
+      left: 0
+      right: 0
+      margin: 0 auto
+      height: 2px
+      background-color: $c-delta
+      box-shadow: 0 5px 5px rgba(0,0,0,0.2)
+
+.subtitle
+  position: relative
+  font-size: 20px
+  line-height: 1.2
+  font-weight: 700
+  color: $c-juliet
+
+.btn
+  font-family: $f-primary
+  font-size: 15px
+  font-weight: 600
+  color: $c-delta
+  cursor: pointer
+  transition: all ease 0.3s
+  &--white
+    background: none
+    border: 2px solid $c-delta
+    padding: 9px 29px
+    &:hover
+      opacity: .6
+  &--orange
+    border: none
+    border-radius: 3px
+    background-color: $c-alpha
+    padding: 13px 24px
+    &:hover
+      opacity: .85
+
+.form
+  display: flex
+  &__title
+    text-align: center
+    font-size: 20px
+    font-weight: 700
+    color: $c-juliet
+    background-color: $c-echo
+    border-radius: 2px 2px 0 0
+    padding: 16px 10px 17px
+  &__accent
+    color: $c-alpha
+  &__body
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1 0 254px
+    padding: 31px 32px 47px 38px
+  &__item
+    width: 100%
+    height: 31px
+    padding: 0 14.5px 0
+    font-family: $f-primary
+    font-size: 14px
+    color: $c-golf
+    border: none
+    box-shadow: 0 1px 0 0 rgba(0,0,1,0.15)
+    &:focus
+      outline: none
+  &__name
+    margin-bottom: 35px
+  &__email
+    margin-bottom: 47px
+  &__password
+    margin-bottom: 2px
+  &__btn
+    width: 100%
+    border: none
+    font-family: $f-primary
+    font-size: 15px
+    font-weight: 600
+    color: $c-delta
+    background-color: $c-bravo
+    border-radius: 0 0 2px 2px
+    cursor: pointer
+    padding: 17px 0
+    &:hover
+      opacity: 0.9
+
+.circle
+  display: flex
+  align-items: center
+  justify-content: center
+  border: 2px solid $c-alpha
+  border-radius: 50%
+
+.header
+  width: 100%
+  height: 70px
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 2
+  background: $c-charlie
+  padding: 19px 0
+  &__container
+    max-width: 1132px
+  &__logo
+    width: 79px
+    height: 27px
+    position: relative
+    z-index: 6
+  &__menu
+    display: flex
+    align-items: center
+    flex: 0 0 442px
+
+.menu
+  &__icon
+    display: none
+  &__body
+    width: 100%
+  &__list
+    display: flex
+    justify-content: space-between
+    flex: 1 0 442px
+  &__link
+    text-decoration: none
+    opacity: .69
+    font-size: 14px
+    line-height: 1.2
+    font-weight: 600
+    color: $c-delta
+    cursor: pointer
+    position: relative
+    padding: 0 0 3px 0
+    transition: width 0.3s
+    &:hover
+      opacity: 0.9
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 0
+      bottom: 0
+      width: 0
+      height: 2px
+      background-color: $c-charlie
+      transition: width 0.3s
+    &:hover:after
+      content: ''
+      width: 100%
+      display: block
+      position: absolute
+      left: 0
+      bottom: -3px
+      height: 2px
+      background-color: $c-alpha
+      transition: width 0.3s
+
+.cover
+  background: url("../images/header_panel.webp") center bottom / cover no-repeat
+  padding: 180px 0 139px
+  &__content
+    animation: fadeInLeftBig
+    animation-duration: 1s
+  &__logo
+    width: 175px
+    height: 60px
+    margin: 0 0 20px
+  &__title
+    max-width: 517px
+    text-align: left
+    line-height: 1.2
+    margin-right: 15px
+    margin-left: -3px
+  &__description
+    max-width: 517px
+    opacity: .8
+    font-family: $f-secondary
+    font-size: 16px
+    line-height: 23px
+    font-weight: 300
+    color: $c-delta
+    margin: 0 15px 41px 0
+  &__form
+    align-self: start
+    min-width: 285px
+    width: 32.7%
+    background-color: $c-delta
+    border-radius: 3px
+    margin: 30px 0 0
+    animation: fadeInRightBig
+    animation-duration: 1s
+
+.social
+  background: $c-delta
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2)
+  padding: 19px 0 18px
+  &__container
+    align-items: center
+  &__text
+    margin: 0 15px 0 0
+  &__subtitle
+    margin: 0 0 3px
+  &__link-list
+    flex: 0 1 652px
+    padding: 0 18px 0 0
+  &__list-item
+    font-size: 44px
+    color: $c-foxtrot
+
+.socials
+  display: flex
+  justify-content: space-between
+  &__link
+    text-decoration: none
+    transition: all ease 0.3s
+    &:hover
+      color: $c-alpha
+
+.tabs
+  background: $c-echo
+  padding: 146px 0 116px
+  &__container
+    max-width: 1143px
+    padding-right: 19px
+  &-triggers
+    display: flex
+    flex-direction: column
+    &__item
+      width: 109px
+      height: 111px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 15px
+      font-weight: 700
+      text-decoration: none
+      color: $c-delta
+      background-color: $c-india
+      &:first-child
+        border-radius: 3px 3px 0 0
+        border-bottom: 1px solid $c-delta
+      &:last-child
+        border-radius: 0 0 3px 3px
+        border-top: 1px solid $c-delta
+      &--active
+        background-color: $c-alpha
+        transition: all ease 0.3s
+
+  &-content
+    max-width: 477px
+    margin: 0 15px
+    padding-top: 4px
+    &__item
+      display: none
+      margin: 0 0 47px
+      &--active
+        display: block
+  &__subtitle
+    margin: 0 0 48px
+    &--outside
+      padding: 0 15px 0
+  &__img
+    width: 320px
+    height: 253px
+    margin-top: 23px
+
+.sublist-section
+  background-color: $c-delta
+  padding: 102px 0 110px
+  &__container
+    max-width: 1196px
+  &__img
+    width: 100%
+    height: 100%
+    max-width: 525px
+    margin: 8px 15px 0 0
+  &__text
+    width: 60%
+    max-width: 437px
+    margin-right: 48px
+  &__description
+    margin: 0 0 43px
+  &__items
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__item
+    position: relative
+    margin: 0 0 34px
+    padding: 0 0 0 70px
+    &:last-child
+      margin: 0
+  &__circle
+    width: 40px
+    height: 40px
+    position: absolute
+    top: 4px
+    left: 0
+    &-icon
+      font-size: 16px
+      color: $c-alpha
+  &__subtitle
+    line-height: 17px
+    font-weight: 600
+    color: $c-juliet
+    margin: 0 0 6px
+
+.picture-section
+  background-color: $c-echo
+  padding: 74px 0
+  &__container
+    max-width: 1252px
+  &__text
+    width: 60%
+    max-width: 475px
+    padding: 29px 0 0
+    margin: 0 15px 0 62px
+  &__description
+    margin-bottom: 20px
+  &__img
+    width: 100%
+    height: 100%
+    max-width: 525px
+
+.awesome
+  background: $c-delta
+  padding: 100px 0 60px
+  &__container
+    flex-direction: column
+    align-items: center
+    max-width: 1145px
+  &__description
+    margin: 0 0 79px
+
+
+.awesome-items
+  width: 100%
+  display: flex
+  justify-content: space-between
+  &__item
+    max-width: 352px
+    position: relative
+    text-align: center
+    flex: 1 1 352px
+    padding: 97px 0 0
+    margin: 0 0 40px
+    &:nth-child(2)
+      margin: 0 15px 40px
+  &__circle
+    width: 70px
+    height: 70px
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    margin: 0 auto
+  &__circle-icon
+    font-size: 32px
+    color: $c-alpha
+  &__subtitle
+    font-size: 20px
+    font-weight: 700
+    color: $c-india
+    margin: 0 0 23px
+  &__description
+    max-width: 352px
+
+.pricing
+  background: $c-echo
+  padding: 101px 0 67px
+  &__container
+    max-width: 1139px
+    flex-direction: column
+    align-items: center
+  &__description
+    line-height: normal
+    margin: 0 0 80px
+  &__items
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+
+.pricing-item
+  width: 343px
+  min-width: 192px
+  text-align: center
+  margin: 0 0 30px
+  &__professional
+    margin: 0 15px 30px
+  &__title
+    font-size: 20px
+    line-height: 24px
+    font-weight: 700
+    color: $c-delta
+    background-color: $c-india
+    border-bottom: 1px solid $c-echo
+    padding: 17px 0 18px
+  &__price
+    background-color: $c-india
+    padding: 43px 0 16px
+  &__cost
+    font-family: $f-secondary
+    font-size: 94px
+    font-weight: 700
+    color: $c-delta
+    margin: 0 0 28px
+  &__dollar
+    font-size: 35px
+  &__period
+    opacity: .5
+    font-weight: 600
+    font-style: italic
+    line-height: 24px
+    color: $c-delta
+  &__popular
+    height: 5px
+    background-color: $c-alpha
+    &--most-popular
+      height: 40px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-weight: 700
+      color: $c-delta
+      &::before
+        content: 'our most popular'
+        text-transform: uppercase
+  &__features-list
+    flex-grow: 1
+  &__feature
+    text-align: center
+    line-height: 24px
+    text-transform: uppercase
+    border-bottom: 1px solid $c-echo
+    background-color: $c-delta
+    padding: 8px 0
+    &:last-child
+      border: none
+
+.reviews
+  background: $c-delta
+  padding: 99px 0 114px
+  &__container
+    max-width: 1085px
+    flex-direction: column
+    align-items: center
+  &__description
+    margin: 0 0 53px
+  &__items
+    width: 100%
+    display: flex
+    justify-content: space-between
+  &__item
+    &:nth-child(2)
+      margin: 0 15px
+  &__quote
+    width: 273px
+    min-height: 131px
+    position: relative
+    border-radius: 2px
+    background-color: $c-echo
+    padding: 22px 10px 16px
+    margin: 0 0 24px
+    &::after
+      content: ''
+      position: absolute
+      left: 23px
+      top: 131px
+      border: 12px solid transparent
+      border-top: 15px solid $c-echo
+  &__review-text
+    font-style: italic
+    line-height: 1.2
+  &__customer
+    position: relative
+    padding: 12px 0 0 88px
+  &__customer-photo
+    width: 70px
+    height: 70px
+    position: absolute
+    top: 0
+    left: 0
+    border-radius: 50%
+  &__customer-name
+    font-size: 20px
+    line-height: 1.2
+    font-weight: 700
+    color: $c-india
+    margin-bottom: 4px
+  &__customer-present-position
+    line-height: 1.2
+
+.additional
+  background: url(../images/custom_panel.webp) center/cover no-repeat
+  padding: 66px 0 62px
+  &__container
+    flex-direction: column
+    align-items: center
+  &__title
+    margin: 0 0 30px
+    padding-bottom: 24px
+  &__description
+    opacity: .8
+    font-family: $f-secondary
+    font-size: 16px
+    font-weight: 300
+    color: $c-delta
+    margin: 0 0 33px
+
+.contacts
+  background: $c-delta
+  padding: 100px 0 83px
+  &__container
+    max-width: 1147px
+    flex-direction: column
+    align-items: center
+  &__description
+    margin: 0 0 79px
+  &__form
+    justify-content: space-between
+    width: 100%
+    min-height: 155px
+    margin: 0 0 40px 0
+    &-left
+      width: 47%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &-left-item
+      height: 31px
+      border: none
+      padding: 4px 11px
+      box-shadow: 0 1px 0 0 rgba(0,0,1,0.15)
+      font-family: $f-primary
+      font-size: 14px
+      line-height: 1.2
+      color: $c-golf
+      &:focus
+        outline: none
+  &__textarea
+    width: 47%
+    resize: none
+    border: none
+    padding: 4px 11px
+    box-shadow: 0 1px 0 0 rgba(0,0,1,0.15)
+    font-family: $f-primary
+    font-size: 14px
+    line-height: 1.2
+    color: $c-golf
+    &:focus
+      outline: none
+  &__btn
+    padding: 12px 21px
+
+.footer
+  text-align: center
+  background: $c-charlie
+  padding: 20px 0 15px
+  &__link-list
+    width: 22.8%
+    min-width: 280px
+    margin: 0 auto 6px
+  &__list-item
+    font-size: 24px
+    color: $c-foxtrot
+  &__copyright
+    opacity: .5
+    font-size: 12px
+    color: $c-delta
+
+// Анимация
+@-webkit-keyframes fadeInLeftBig
+  from
+    opacity: 0
+    -webkit-transform: translate3d(-2000px, 0, 0)
+    transform: translate3d(-2000px, 0, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@keyframes fadeInLeftBig
+  from
+    opacity: 0
+    -webkit-transform: translate3d(-2000px, 0, 0)
+    transform: translate3d(-2000px, 0, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@-webkit-keyframes fadeInRightBig
+  from
+    opacity: 0
+    -webkit-transform: translate3d(2000px, 0, 0)
+    transform: translate3d(2000px, 0, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+@keyframes fadeInRightBig
+  from
+    opacity: 0
+    -webkit-transform: translate3d(2000px, 0, 0)
+    transform: translate3d(2000px, 0, 0)
+  to
+    opacity: 1
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+
+@import media

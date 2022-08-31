@@ -1,0 +1,290 @@
+@import vars
+
+@media (max-width: 992px)
+  .cover
+    padding: 150px 0 100px
+
+  .tabs
+    padding: 80px 0 47px
+
+  .sublist-section
+    padding: 80px 0
+
+  .picture-section
+    padding: 75px 0 55px
+
+  .awesome
+    padding: 80px 0
+    &__description
+      margin: 0 0 60px
+
+  .awesome-items
+    justify-content: space-around
+    align-items: flex-start
+    flex-wrap: wrap
+    &__item
+      &:nth-child(2)
+        margin: 0 0 40px
+      &:last-child
+        margin: 0
+
+  .pricing
+    padding: 80px 0
+    &__description
+      margin: 0 0 60px
+    &__items
+      justify-content: space-around
+      align-items: flex-start
+      flex-wrap: wrap
+
+  .pricing-item
+    margin: 0 15px 30px
+    &:last-child
+      margin: 0
+
+  .reviews
+    padding: 80px 0
+    &__description
+      margin: 0 0 60px
+    &__items
+      justify-content: space-around
+      flex-wrap: wrap
+    &__item
+      margin: 0 0 30px
+      &:nth-child(2)
+        margin: 0 0 30px
+
+  .contacts
+    padding: 80px 0
+    &__description
+      margin: 0 0 60px
+
+
+@media (max-width: 767px)
+  .header
+    &__menu
+      flex-basis: 0
+
+  .menu
+    &__icon
+      width: 30px
+      height: 18px
+      display: block
+      position: relative
+      z-index: 5
+      cursor: pointer
+      &::before, &::after, & span
+        width: 100%
+        height: 10%
+        position: absolute
+        left: 0
+        transition: all .3s ease 0s
+        background-color: $c-delta
+      &::before, &::after
+        content: ''
+      &::before
+        top: 0
+      &::after
+        bottom: 0
+      & span
+        top: 50%
+        transform: scale(1) translate(0, -50%)
+      &.--active span
+        transform: scale(0) translate(0, -50%)
+      &.--active::before
+        top: 50%
+        transform: rotate(-45deg) translate(0, -100%)
+      &.--active::after
+        bottom: 50%
+        transform: rotate(45deg) translate(0, 50%)
+    &__body
+      height: 100%
+      position: fixed
+      top: 0
+      left: -100%
+      overflow: auto
+      background-color: rgba(0, 0, 0, 0.9)
+      transition: left .3s ease 0s
+      padding: 100px 30px 30px
+      &::before
+        width: 100%
+        height: 70px
+        content: ''
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 7
+        background-color: $c-charlie
+      &.--active
+        left: 0
+    &__list
+      flex-direction: column
+      & li
+        margin: 0 0 30px 0
+      & li:last-child
+        margin: 0
+    &__link
+      font-size: 24px
+      opacity: 1
+
+  .cover
+    padding: 130px 0 80px
+    &__container
+      flex-direction: column
+    &__content
+      width: 80%
+      margin: 0 auto
+    &__title
+      margin-right: 0
+    &__description
+      margin: 0 0 40px
+    &__form
+      width: 80%
+      margin: 50px auto 0
+
+  .social
+    &__container
+      flex-direction: column
+    &__text
+      margin: 0 auto 25px
+      width: 80%
+    &__link-list
+      padding: 0
+      width: 80%
+      flex-basis: auto
+      margin: 0 auto
+
+  .tabs
+    padding: 60px 0 47px
+    &-triggers
+      margin: 5px 0 0
+    &__img
+      display: none
+
+  .sublist-section
+    padding: 60px 0
+    &__container
+      flex-direction: column
+    &__img
+      order: 2
+      margin: 0 auto
+    &__text
+      width: 80%
+      order: 1
+      margin: 0 auto 30px
+
+  .picture-section
+    padding: 60px 0 55px
+    &__container
+      flex-direction: column
+    &__text
+      width: 80%
+      padding: 0
+      margin: 0 auto 40px auto
+    &__img
+      margin: 0 auto
+
+  .awesome
+    padding: 60px 0
+    &__description
+      margin: 0 0 50px
+
+  .pricing
+    padding: 60px 0
+    &__description
+      margin: 0 0 50px
+
+  .pricing-item
+    width: 80%
+    margin: 0 0 30px
+    &__professional
+      margin: 0 0 30px
+
+  .reviews
+    padding: 60px 0
+    &__description
+      margin: 0 0 50px
+    &__item
+      &:last-child
+        margin: 0
+
+  .contacts
+    padding: 60px 0
+    &__description
+      margin: 0 0 50px
+
+
+
+@media (max-width: 576px)
+  .cover
+    padding: 110px 0 60px
+    &__content
+      width: 100%
+    &__form
+      width: 100%
+
+  .social
+    &__text
+      width: 100%
+    &__link-list
+      width: 100%
+    &__list-item
+      font-size: 30px
+
+  .tabs
+    padding: 40px 0
+    &-triggers
+      &__item
+        width: 60px
+        height: 60px
+    &__subtitle
+      text-align: center
+      margin: 0 auto 30px
+
+  .sublist-section
+    padding: 40px 0
+    &__img
+      width: 100%
+    &__text
+      width: 100%
+
+  .picture-section
+    padding: 40px 0
+    &__text
+      width: 100%
+
+  .awesome
+    padding: 40px 0
+    &__description
+      margin: 0 0 40px
+
+  .pricing
+    padding: 40px 0
+    &__description
+      margin: 0 0 40px
+
+  .pricing-item
+    width: 100%
+
+  .reviews
+    padding: 40px 0
+    &__description
+      margin: 0 0 40px
+
+  .additional
+    padding: 35px 0
+
+  .contacts
+    padding: 40px 0
+    &__description
+      margin: 0 0 40px
+    &__form
+      flex-direction: column
+      align-items: center
+      &-left
+        width: 90%
+        flex: 1 0 96px
+    &__textarea
+      width: 90%
+      flex: 1 0 96px
+      margin-top: 5px
